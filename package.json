@@ -1,31 +1,39 @@
 {
-  "name": "nextra-docs-template",
-  "version": "0.0.1",
+  "name": "volvox-apollo-docs",
+  "version": "1.0.0",
   "description": "Volvox Apollo Docs",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 5000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start - 5000",
+    "lint": "next lint",
+    "build:export": "npx next build && npx next export -o build/",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VolvoxLLC/Volvox.Apollo.Docs.git"
   },
-  "author": "Volvox <admin@volvox.tech>",
+  "author": "Volvox LLC <admin@volvox.tech>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/VolvoxLLC/Volvox.Apollo.Docs/issues"
   },
   "homepage": "https://github.com/VolvoxLLC/Volvox.Apollo.Docs#readme",
   "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/node": "18.11.10",
+    "@vercel/style-guide": "^5.0.1",
+    "eslint": "^8.51.0",
+    "eslint-config-next": "^13.5.6",
+    "eslint-config-prettier": "^9.0.0",
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
+    "prettier-plugin-packagejson": "^2.4.6",
+    "prettier-plugin-tailwindcss": "^0.5.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "18.11.10",
+    "react-dom": "^18.2.0",
     "typescript": "^4.9.3"
   }
 }

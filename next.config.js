@@ -5,4 +5,8 @@ const withNextra = require("nextra")({
 
 module.exports = withNextra({
   basePath: "/docs",
+  content: [
+    "./pages/**/*.{js,jsx,ts,tsx,md,mdx}",
+    "./components/**/*.{js,jsx,ts,tsx,md,mdx}",
+  ],
 });
