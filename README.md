@@ -2,9 +2,8 @@
 
 This repository contains documentation for Volvox.Apollo. It uses a template for creating documentation with [Nextra](https://nextra.site).
 
+[Template](https://nextra-docs-template.vercel.app)\
 [**Live Demo →**](https://nextra-docs-template.vercel.app)
-
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
 
 ## Local Development
 
