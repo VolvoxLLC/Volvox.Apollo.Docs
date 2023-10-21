@@ -13,7 +13,7 @@
 	"license": "MIT",
 	"author": "Volvox LLC <admin@volvox.tech>",
 	"scripts": {
-		"build": "next build",
+		"build": "npx next telemetry disable && next build",
 		"build:export": "npx next build && npx next export -o build/",
 		"dev": "next dev -p 5001",
 		"format": "prettier --write .",
