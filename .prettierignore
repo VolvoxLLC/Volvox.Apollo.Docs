@@ -1,0 +1,13 @@
+**/.github
+**/*.md
+**/*.env
+package-lock.json
+.editorconfig
+.dockerignore
+Dockerfile
+LICENSE
+.vscode-test/
+out/
+dist/
+test-fixtures/
+node_modules/

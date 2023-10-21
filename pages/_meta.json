@@ -1,5 +1,5 @@
 {
-  "index": "Nextra Docs Tutorial",
+  "index": "Volvox.Apollo Docs",
   "tutorial": "Introduction",
   "advanced": "Advanced (A Folder)",
   "about": {
@@ -7,9 +7,9 @@
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Help ↗",
     "type": "page",
-    "href": "https://twitter.com/volvoxllc",
+    "href": "https://discord.gg/Y6BgvsWuNU",
     "newWindow": true
   }
 }

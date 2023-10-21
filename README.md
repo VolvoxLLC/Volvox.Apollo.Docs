@@ -1,4 +1,4 @@
-# Volvox Apollo Docs
+# Volvox.Apollo Docs
 
 This repository contains documentation for Volvox.Apollo. It uses a template for creating documentation with [Nextra](https://nextra.site).
 

@@ -3,10 +3,10 @@ updates:
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
-    directory: "src/Volvox.Apollo.Web/ClientApp"
+    directory: "/"
     schedule:
       interval: "daily"
-    versioning-strategy: increase
+    versioning-strategy: auto
     assignees:
       - "ethan-guest"
     reviewers:
