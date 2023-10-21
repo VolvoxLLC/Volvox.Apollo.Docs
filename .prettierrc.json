@@ -15,7 +15,7 @@
 	"endOfLine": "lf",
 	"importOrderSortSpecifiers": true,
 	"importOrderSeparation": true,
-  "tailwindFunctions": ["cva", "cn"],
+	"tailwindFunctions": ["cva", "cn"],
 	"plugins": [
 		"@trivago/prettier-plugin-sort-imports",
 		"prettier-plugin-tailwindcss",

@@ -1,7 +1,6 @@
 **/.github
 **/*.md
 **/*.env
-package.json
 package-lock.json
 .editorconfig
 .dockerignore

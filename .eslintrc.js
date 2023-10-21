@@ -15,13 +15,11 @@ module.exports = {
 	settings: { "import/resolver": { typescript: { project } } },
 	rules: {
 		"@typescript-eslint/explicit-function-return-type": 1,
-		"@typescript-eslint/no-confusing-void-expression": "off",
 		"@typescript-eslint/no-misused-promises": 2,
 		"import/no-extraneous-dependencies": 2,
 		"import/order": 2,
-		"import/no-default-export": "off",
 		"no-console": 1,
 		"react/jsx-sort-props": 2,
-		"react/no-array-index-key": "off"
 	}
+  // Note: 0 = off, 1 = warn, 2 = error
 }
