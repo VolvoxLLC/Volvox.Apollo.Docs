@@ -1,4 +1,4 @@
-name: Build Image and Deploy API to Production
+name: Build Image and Deploy Docs to Production
 
 on:
   push:
