@@ -1,0 +1,63 @@
+name: Build Image and Deploy API to Production
+
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: volvoxllc/volvox.apollo/docs
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.1
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3.0.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=schedule
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5.0.0
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Deploy to Droplet
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.VOLVOX_APOLLO_SSH_KEY }}
+          script: |
+            cd /opt/volvox
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            docker compose up -d
