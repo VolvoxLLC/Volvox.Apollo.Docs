@@ -29,5 +29,6 @@ ENV NODE_ENV=production
 EXPOSE 5000
 COPY --from=builder /opt/app/build ./build
 WORKDIR /opt/app/build
+COPY package.json package-lock.json ./
 # Define the command to run the application
 CMD ["sh", "-l", "-c", "npm run serve"]
