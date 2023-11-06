@@ -31,7 +31,6 @@ ENV NODE_ENV=production
 COPY --from=builder /opt/app/public ./public
 COPY --from=builder /opt/app/next.config.js ./
 COPY --from=builder /opt/app/.next ./.next
-COPY --from=builder /opt/app/pages ./pages
 COPY --from=builder /opt/app/node_modules ./node_modules
 # Define the command to run the application
 CMD ["node_modules/.bin/next", "start"]
