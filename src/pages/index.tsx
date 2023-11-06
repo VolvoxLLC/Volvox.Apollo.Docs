@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Volvox.Apollo Docs Tutorial
+            Volvox.Apollo Docs Introduction
           </Link>
         </div>
       </div>

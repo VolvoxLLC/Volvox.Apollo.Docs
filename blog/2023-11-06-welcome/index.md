@@ -1,7 +1,7 @@
 ---
 slug: welcome
 title: Welcome
-authors: [slorber, yangshun]
+authors: [bill]
 tags: [facebook, hello, docusaurus]
 ---
 
@@ -13,8 +13,8 @@ Regular blog authors can be added to `authors.yml`.
 
 The blog post date can be extracted from filenames, such as:
 
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
+- `2023-11-06-welcome.md`
+- `2023-11-06-welcome/index.md`
 
 A blog post folder can be convenient to co-locate blog post images:
 
