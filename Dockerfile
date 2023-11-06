@@ -28,6 +28,6 @@ ENV NODE_ENV=production
 # Copy necessary files from the "builder" stage
 EXPOSE 5000
 COPY --from=builder /opt/app/build ./build
-RUN cd build
+WORKDIR /opt/app/build
 # Define the command to run the application
 CMD ["sh", "-l", "-c", "npm run serve"]
