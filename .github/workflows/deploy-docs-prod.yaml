@@ -2,8 +2,7 @@ name: Build Image and Deploy Docs to Production
 
 on:
   push:
-    tags:
-      - "*"
+    branches: ["master"]
   workflow_dispatch:
 
 env:
