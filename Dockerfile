@@ -20,15 +20,7 @@ RUN apk add --no-cache --update \
 # this leaves us with a default v1 docusarus install
 # we can mount our own into the container
 USER node
-RUN mkdir ~/npm-global \
-    && npm config set prefix '~/npm-global' \
-    && echo 'export PATH=~/npm-global/bin:$PATH' > ~/.profile \
-    && mkdir -p /home/node/docs \
-    && cd /home/node/docs \
-    && npm install --global docusaurus-init \
-    && sh -l -c docusaurus-init \ 
-    && rm Dockerfile \
-    && rm docker-compose.yml
+RUN npm install --global docusaurus-init
 
 EXPOSE 5001/tcp
 USER node
