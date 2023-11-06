@@ -4,9 +4,11 @@ FROM node:lts-alpine AS deps
 WORKDIR /opt/app
 # Copy package.json and package-lock.json to the working directory
 COPY package.json package-lock.json ./
-COPY . .
+COPY . /
 # Install production dependencies only
 RUN npm ci --only=production
+# Build the application
+RUN npm run build
 
 # Stage 2: Build the application
 FROM node:lts-alpine AS builder
@@ -16,8 +18,6 @@ WORKDIR /opt/app
 # Copy node_modules from the "deps" stage
 COPY package.json package-lock.json ./
 COPY --from=deps /opt/app/node_modules ./node_modules
-# Build the application
-RUN npm run build
 
 # Stage 3: Create the production image
 FROM node:lts-alpine AS runner
@@ -30,4 +30,4 @@ EXPOSE 5000
 COPY --from=builder /opt/app/build ./build
 COPY package.json package-lock.json ./
 # Define the command to run the application
-CMD ["sh", "-l", "-c", "npm run serve"]
+CMD run.sh
