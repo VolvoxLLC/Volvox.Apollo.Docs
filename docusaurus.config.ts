@@ -65,14 +65,24 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: 'https://apollo.volvox.tech',
+          label: 'Home',
           position: 'left',
+          target: '_parent'
+        },
+        {
+          type: 'doc',
+          position: 'left',
+          docId: 'intro',
           label: 'Docs'
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/VolvoxLLC/Volvox.Apollo.Docs',
+          to: '/blog', 
+          label: 'Blog', 
+          position: 'left'
+        },
+        {
+          to: 'https://github.com/VolvoxLLC/Volvox.Apollo.Docs',
           label: 'GitHub',
           position: 'right',
         },
