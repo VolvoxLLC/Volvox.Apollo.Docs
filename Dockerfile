@@ -31,22 +31,32 @@
 
 ## Base ########################################################################
 # Use a larger node image to do the build for native deps (e.g., gcc, python)
-FROM node:lts as base
+FROM node:lts-alpine AS deps
 
-# We'll run the app as the `node` user, so put it in their home directory
-WORKDIR /home/node/app
-# Copy the source code over
-COPY --chown=node:node . /home/node/app/
+WORKDIR /opt/app
+# Copy package.json and package-lock.json to the working directory
+COPY package.json package-lock.json ./
+# Install production dependencies only
+RUN npm ci --only=production
 
-## Development #################################################################
-# Define a development target that installs devDeps and runs in dev mode
-FROM base as development
-WORKDIR /home/node/app
-# Install (not ci) with dependencies, and for Linux vs. Linux Musl (which we use for -alpine)
-RUN npm install
-# Switch to the node user vs. root
-USER node
-# Expose port 5000
+# Stage 2: Build the application
+FROM node:lts-alpine AS builder
+
+WORKDIR /opt/app
+# Copy all files from the current directory to the working directory in the container
+COPY . .
+# Copy node_modules from the "deps" stage
+COPY --from=deps /opt/app/node_modules ./node_modules
+# Build the application
+RUN npm run build
+
+# Stage 3: Create the production image
+FROM node:lts-alpine AS runner
+# Set the working directory in the container to /opt/app
+WORKDIR /opt/app
+# Set environment variable
+ENV NODE_ENV=production
+# Copy necessary files from the "builder" stage
 EXPOSE 5000
-# Start the app in debug mode so we can attach the debugger
-CMD ["npm", "serve"]
+# Define the command to run the application
+CMD ["sh", "-l", "-c", "npm run serve"]
