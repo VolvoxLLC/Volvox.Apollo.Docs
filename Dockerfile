@@ -10,8 +10,20 @@ LABEL name="Docusaurus on docker latest-stable" \
       description="Volvox.Apollo Docs \
           on Node 20.x, lts-alpine" 
   
+# run as our node user from base image
+# we delete the dockerfiles we don't need
+# this leaves us with a default v1 docusarus install
+# we can mount our own into the container
 USER node
-RUN npm install
+RUN mkdir ~/npm-global \
+    && npm config set prefix '~/npm-global' \
+    && echo 'export PATH=~/npm-global/bin:$PATH' > ~/.profile \
+    && mkdir -p /home/node/docs \
+    && cd /home/node/docs \
+    && npm install --global docusaurus-init \
+    && sh -l -c docusaurus-init \ 
+    && rm Dockerfile \
+    && rm docker-compose.yml
 
 EXPOSE 5001/tcp
 USER node
