@@ -6,7 +6,7 @@ WORKDIR /opt/app
 COPY package.json package-lock.json ./
 COPY . /
 # Install production dependencies only
-RUN npm ci
+RUN npm install
 
 # Stage 2: Build the application
 FROM node:lts-alpine AS builder
@@ -28,6 +28,8 @@ ENV NODE_ENV=production
 # Copy necessary files from the "builder" stage
 EXPOSE 5000
 COPY --from=builder /opt/app/build ./build
+COPY --from=builder /opt/app/docusaurus.config.ts .
+COPY --from=builder /opt/app/node_modules ./node_modules
 COPY package.json package-lock.json ./
 # Define the command to run the application
 CMD npm run serve
