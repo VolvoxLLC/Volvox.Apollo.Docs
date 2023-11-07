@@ -104,7 +104,7 @@ const config: Config = {
           items: [
             {
               label: 'Intro',
-              to: '/apollo-docs/intro',
+              to: '/docs/intro',
             },
           ],
         },
