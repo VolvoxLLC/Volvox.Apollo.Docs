@@ -65,8 +65,13 @@ const config: Config = {
       items: [
         {
           position: 'left',
-          label: 'Home',
+          label: 'Apollo',
+          to: 'https://apollo.volvox.tech',
+        },
+        {
           to: '/',
+          position: 'left',
+          label: 'Home'
         },
         {
           type: 'doc',
@@ -75,7 +80,7 @@ const config: Config = {
           label: 'Docs'
         },
         {
-          to: '/blog',
+          to: '/blog/',
           label: 'Blog',
           position: 'left'
         },
