@@ -70,7 +70,7 @@ const config: Config = {
           to: 'https://apollo.volvox.tech',
         },
         {
-          to: '/',
+          to: '/apollo-docs',
           position: 'left',
           label: 'Home'
         },
