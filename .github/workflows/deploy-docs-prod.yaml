@@ -60,3 +60,4 @@ jobs:
             cd /opt/volvox
             docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
             docker compose up -d
+            docker system prune
