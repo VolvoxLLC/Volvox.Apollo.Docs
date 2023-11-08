@@ -70,7 +70,7 @@ const config: Config = {
           to: 'https://apollo.volvox.tech',
         },
         {
-          to: '/apollo-docs',
+          to: '/apollo-docs/',
           position: 'left',
           label: 'Home'
         },
@@ -138,6 +138,10 @@ const config: Config = {
       theme: prismThemes.oneLight,
       darkTheme: prismThemes.oneDark,
       additionalLanguages: ['json']
+    },
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
     },
   } satisfies Preset.ThemeConfig,
 
