@@ -8,13 +8,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #218AFF;
+  --ifm-color-primary-dark: #1D7BE3;
+  --ifm-color-primary-darker: #1A6BC6;
+  --ifm-color-primary-darkest: #165CAA;
+  --ifm-color-primary-light: #3A97FF;
+  --ifm-color-primary-lighter: #52A4FF;
+  --ifm-color-primary-lightest: #6BB1FF;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'JetBrains Mono';
@@ -22,13 +22,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #218AFF;
+  --ifm-color-primary-dark: #1D7BE3;
+  --ifm-color-primary-darker: #1A6BC6;
+  --ifm-color-primary-darkest: #165CAA;
+  --ifm-color-primary-light: #3A97FF;
+  --ifm-color-primary-lighter: #52A4FF;
+  --ifm-color-primary-lightest: #6BB1FF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -166,6 +166,53 @@ html[data-theme='light'] .twitter-link {
   &:hover {
     &:before {
       background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgNC41NTdjLS44ODMuMzkyLTEuODMyLjY1Ni0yLjgyOC43NzUgMS4wMTctLjYwOSAxLjc5OC0xLjU3NCAyLjE2NS0yLjcyNC0uOTUxLjU2NC0yLjAwNS45NzQtMy4xMjcgMS4xOTUtLjg5Ny0uOTU3LTIuMTc4LTEuNTU1LTMuNTk0LTEuNTU1LTMuMTc5IDAtNS41MTUgMi45NjYtNC43OTcgNi4wNDUtNC4wOTEtLjIwNS03LjcxOS0yLjE2NS0xMC4xNDgtNS4xNDQtMS4yOSAyLjIxMy0uNjY5IDUuMTA4IDEuNTIzIDYuNTc0LS44MDYtLjAyNi0xLjU2Ni0uMjQ3LTIuMjI5LS42MTYtLjA1NCAyLjI4MSAxLjU4MSA0LjQxNSAzLjk0OSA0Ljg5LS42OTMuMTg4LTEuNDUyLjIzMi0yLjIyNC4wODQuNjI2IDEuOTU2IDIuNDQ0IDMuMzc5IDQuNiAzLjQxOS0yLjA3IDEuNjIzLTQuNjc4IDIuMzQ4LTcuMjkgMi4wNCAyLjE3OSAxLjM5NyA0Ljc2OCAyLjIxMiA3LjU0OCAyLjIxMiA5LjE0MiAwIDE0LjMwNy03LjcyMSAxMy45OTUtMTQuNjQ2Ljk2Mi0uNjk1IDEuNzk3LTEuNTYyIDIuNDU3LTIuNTQ5eiIvPjwvc3ZnPg==") 0 0/contain;
+    }
+  }
+}
+
+
+// Logo Dark Icon
+html[data-theme='dark'] .logo {
+  align-items: center;
+  display: flex;
+
+  &:before {
+    align-self: center;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODEuMzMzIiBoZWlnaHQ9IjI5NiIgdmVyc2lvbj0iMS4wIiB2aWV3Qm94PSIwIDAgMjExIDIyMiI+PHBhdGggZD0iTTMxLjMgMS41Yy03LjkgMi4yLTEzLjEgNS4yLTE4LjkgMTAuOS0xNSAxNS4xLTE2LjMgMzcuNC0zIDU1LjMgMi4zIDMuMiAxMCAxMi4xIDE3LjEgMTkuOEM1Mi43IDExNiA1NiAxMjMuMyA2MCAxNjAuM2MzLjMgMzAuNiA2IDM5LjMgMTQuOCA0OC41IDIxLjggMjIuOSA1OSAxNC40IDY5LjItMTUuOSAxLjgtNS4zIDIuMS03LjkgMS43LTE0LjctLjgtMTQuMi01LjMtMjEuNC0yOS43LTQ3LjctMjEuOC0yMy42LTI1LjktMzMuMi0zMC03MC0yLjUtMjMuMS00LjgtMzIuOS05LjMtNDAuM0M2Ny40IDQuNiA0OC42LTMuMSAzMS4zIDEuNXoiLz48cGF0aCBkPSJNMTU5IDEuNGMtNi44IDEuOS0xMi44IDUuMy0xOCAxMC4yLTkuNCA4LjgtMTIuOCAxOC45LTE2IDQ4LjItMy4xIDI4LjQtNS4zIDM2LjctMTMuMSA0OS42LTQuMSA2LjgtNC4xIDYuOC0yLjEgOC45IDEgMS4yIDcuOCA4LjcgMTUgMTYuNSAxNS4xIDE2LjcgMTkuNiAyMi45IDIyLjcgMzEuM2wyLjIgNi4yIDEuMi0xMi40YzMuNS0zNC45IDcuOC00NC4yIDMzLjEtNzEuOSAxNS41LTE2LjkgMjEuMy0yNC44IDI0LjItMzIuMyA1LjUtMTQuNCAyLTMxLjEtOC44LTQyLjctMTAtMTAuNy0yNi41LTE1LjQtNDAuNC0xMS42eiIvPjwvc3ZnPg==") 0 0/contain;
+    content: '';
+    display: inline-flex;
+    height: 24px;
+    width: 24px;
+    margin-right: 0.5rem;
+    color: var(--ifm-navbar-link-color);
+  }
+
+  &:hover {
+    &:before {
+      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODEuMzMzIiBoZWlnaHQ9IjI5NiIgdmVyc2lvbj0iMS4wIiB2aWV3Qm94PSIwIDAgMjExIDIyMiI+PHBhdGggZD0iTTMxLjMgMS41Yy03LjkgMi4yLTEzLjEgNS4yLTE4LjkgMTAuOS0xNSAxNS4xLTE2LjMgMzcuNC0zIDU1LjMgMi4zIDMuMiAxMCAxMi4xIDE3LjEgMTkuOEM1Mi43IDExNiA1NiAxMjMuMyA2MCAxNjAuM2MzLjMgMzAuNiA2IDM5LjMgMTQuOCA0OC41IDIxLjggMjIuOSA1OSAxNC40IDY5LjItMTUuOSAxLjgtNS4zIDIuMS03LjkgMS43LTE0LjctLjgtMTQuMi01LjMtMjEuNC0yOS43LTQ3LjctMjEuOC0yMy42LTI1LjktMzMuMi0zMC03MC0yLjUtMjMuMS00LjgtMzIuOS05LjMtNDAuM0M2Ny40IDQuNiA0OC42LTMuMSAzMS4zIDEuNXoiLz48cGF0aCBkPSJNMTU5IDEuNGMtNi44IDEuOS0xMi44IDUuMy0xOCAxMC4yLTkuNCA4LjgtMTIuOCAxOC45LTE2IDQ4LjItMy4xIDI4LjQtNS4zIDM2LjctMTMuMSA0OS42LTQuMSA2LjgtNC4xIDYuOC0yLjEgOC45IDEgMS4yIDcuOCA4LjcgMTUgMTYuNSAxNS4xIDE2LjcgMTkuNiAyMi45IDIyLjcgMzEuM2wyLjIgNi4yIDEuMi0xMi40YzMuNS0zNC45IDcuOC00NC4yIDMzLjEtNzEuOSAxNS41LTE2LjkgMjEuMy0yNC44IDI0LjItMzIuMyA1LjUtMTQuNCAyLTMxLjEtOC44LTQyLjctMTAtMTAuNy0yNi41LTE1LjQtNDAuNC0xMS42eiIvPjwvc3ZnPg==") 0 0/contain;
+    }
+  }
+}
+
+// Logo Light Icon
+html[data-theme='light'] .logo {
+  align-items: center;
+  display: flex;
+
+  &:before {
+    align-self: center;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODEuMzMzIiBoZWlnaHQ9IjI5NiIgdmVyc2lvbj0iMS4wIiB2aWV3Qm94PSIwIDAgMjExIDIyMiI+PHBhdGggZD0iTTMxLjMgMS41Yy03LjkgMi4yLTEzLjEgNS4yLTE4LjkgMTAuOS0xNSAxNS4xLTE2LjMgMzcuNC0zIDU1LjMgMi4zIDMuMiAxMCAxMi4xIDE3LjEgMTkuOEM1Mi43IDExNiA1NiAxMjMuMyA2MCAxNjAuM2MzLjMgMzAuNiA2IDM5LjMgMTQuOCA0OC41IDIxLjggMjIuOSA1OSAxNC40IDY5LjItMTUuOSAxLjgtNS4zIDIuMS03LjkgMS43LTE0LjctLjgtMTQuMi01LjMtMjEuNC0yOS43LTQ3LjctMjEuOC0yMy42LTI1LjktMzMuMi0zMC03MC0yLjUtMjMuMS00LjgtMzIuOS05LjMtNDAuM0M2Ny40IDQuNiA0OC42LTMuMSAzMS4zIDEuNXoiLz48cGF0aCBkPSJNMTU5IDEuNGMtNi44IDEuOS0xMi44IDUuMy0xOCAxMC4yLTkuNCA4LjgtMTIuOCAxOC45LTE2IDQ4LjItMy4xIDI4LjQtNS4zIDM2LjctMTMuMSA0OS42LTQuMSA2LjgtNC4xIDYuOC0yLjEgOC45IDEgMS4yIDcuOCA4LjcgMTUgMTYuNSAxNS4xIDE2LjcgMTkuNiAyMi45IDIyLjcgMzEuM2wyLjIgNi4yIDEuMi0xMi40YzMuNS0zNC45IDcuOC00NC4yIDMzLjEtNzEuOSAxNS41LTE2LjkgMjEuMy0yNC44IDI0LjItMzIuMyA1LjUtMTQuNCAyLTMxLjEtOC44LTQyLjctMTAtMTAuNy0yNi41LTE1LjQtNDAuNC0xMS42eiIvPjwvc3ZnPg==") 0 0/contain;
+    content: '';
+    display: inline-flex;
+    height: 24px;
+    width: 24px;
+    margin-right: 0.5rem;
+    color: var(--ifm-navbar-link-color);
+  }
+
+  &:hover {
+    &:before {
+      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyODEuMzMzIiBoZWlnaHQ9IjI5NiIgdmVyc2lvbj0iMS4wIiB2aWV3Qm94PSIwIDAgMjExIDIyMiI+PHBhdGggZD0iTTMxLjMgMS41Yy03LjkgMi4yLTEzLjEgNS4yLTE4LjkgMTAuOS0xNSAxNS4xLTE2LjMgMzcuNC0zIDU1LjMgMi4zIDMuMiAxMCAxMi4xIDE3LjEgMTkuOEM1Mi43IDExNiA1NiAxMjMuMyA2MCAxNjAuM2MzLjMgMzAuNiA2IDM5LjMgMTQuOCA0OC41IDIxLjggMjIuOSA1OSAxNC40IDY5LjItMTUuOSAxLjgtNS4zIDIuMS03LjkgMS43LTE0LjctLjgtMTQuMi01LjMtMjEuNC0yOS43LTQ3LjctMjEuOC0yMy42LTI1LjktMzMuMi0zMC03MC0yLjUtMjMuMS00LjgtMzIuOS05LjMtNDAuM0M2Ny40IDQuNiA0OC42LTMuMSAzMS4zIDEuNXoiLz48cGF0aCBkPSJNMTU5IDEuNGMtNi44IDEuOS0xMi44IDUuMy0xOCAxMC4yLTkuNCA4LjgtMTIuOCAxOC45LTE2IDQ4LjItMy4xIDI4LjQtNS4zIDM2LjctMTMuMSA0OS42LTQuMSA2LjgtNC4xIDYuOC0yLjEgOC45IDEgMS4yIDcuOCA4LjcgMTUgMTYuNSAxNS4xIDE2LjcgMTkuNiAyMi45IDIyLjcgMzEuM2wyLjIgNi4yIDEuMi0xMi40YzMuNS0zNC45IDcuOC00NC4yIDMzLjEtNzEuOSAxNS41LTE2LjkgMjEuMy0yNC44IDI0LjItMzIuMyA1LjUtMTQuNCAyLTMxLjEtOC44LTQyLjctMTAtMTAuNy0yNi41LTE1LjQtNDAuNC0xMS42eiIvPjwvc3ZnPg==") 0 0/contain;
     }
   }
 }

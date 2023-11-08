@@ -59,8 +59,9 @@ const config: Config = {
     navbar: {
       title: 'Volvox.Apollo Docs',
       logo: {
-        alt: 'olvox.Apollo Logo',
-        src: 'img/Apollo-Logo.png',
+        alt: 'Volvox.Apollo Logo',
+        src: 'svg/Apollo-Logo.svg',
+        className: 'logo',
       },
       items: [
         {
