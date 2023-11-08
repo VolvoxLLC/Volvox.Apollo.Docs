@@ -1,13 +1,12 @@
 ---
-sidebar_position: 1
-title: Models & Metrics
-description: Available Volvox.Apollo Models & Metrics
-slug: /models-metrics
+sidebar_position: 2
+title: Models
+description: Available Volvox.Apollo Models
+slug: /models
 ---
 
-# Models & Metrics
-
-The Analyze API endpoint in the Volvox.Apollo suite processes the input to yield a collection of models, each accompanied by a score that quantifies its relevance. Scores span from 0 to 100, where a score of 100 signifies an exact match with the ideal model profile. This scoring system facilitates users in identifying the most suitable model by providing a clear, numerical measure of compatibility.
+# Volvox.Apollo Models
+Volvox.Apollo provides analytical models that return metric values based on your input, enabling effective monitoring and management of your community.
 
 ## What are the Volvox.Apollo Models?
 
@@ -24,3 +23,108 @@ The Analyze API endpoint in the Volvox.Apollo suite processes the input to yield
 | Inflammatory      | Statements or content that are intentionally provocative, offensive, or designed to incite anger, resentment, or conflict in others                                                                                                                                                     |
 | Obscene           | Conduct or content that is considered extremely offensive, indecent, or morally repugnant, typically in violation of societal norms                                                                                                                                                     |
 | Spam              | Unsolicited, irrelevant or repetitive messages, content, or communications sent in bulk. These messages are typically sent via email, instant messaging, or other digital communication channels                                                                                        |
+
+## Example Responses
+
+Input = `This is a test input.`
+```json
+[
+    {
+        "model": "Toxicity",
+        "score": 1.23
+    },
+    {
+        "model": "SevereToxicity",
+        "score": 0.11
+    },
+    {
+        "model": "IdentityAttack",
+        "score": 0.26
+    },
+    {
+        "model": "Insult",
+        "score": 0.76
+    },
+    {
+        "model": "Profanity",
+        "score": 1.41
+    },
+    {
+        "model": "Threat",
+        "score": 0.74
+    },
+    {
+        "model": "SexuallyExplicit",
+        "score": 1.05
+    },
+    {
+        "model": "Flirtation",
+        "score": 17.25
+    },
+    {
+        "model": "Inflammatory",
+        "score": 5.66
+    },
+    {
+        "model": "Obscene",
+        "score": 3.43
+    },
+    {
+        "model": "Spam",
+        "score": 10.01
+    }
+]
+```
+
+Input = `I want to light your house on fire.`
+```json
+[
+    {
+        "model": "Toxicity",
+        "score": 71.76
+    },
+    {
+        "model": "SevereToxicity",
+        "score": 35.37
+    },
+    {
+        "model": "IdentityAttack",
+        "score": 12.44
+    },
+    {
+        "model": "Insult",
+        "score": 24.93
+    },
+    {
+        "model": "Profanity",
+        "score": 26.58
+    },
+    {
+        "model": "Threat",
+        "score": 70.48
+    },
+    {
+        "model": "SexuallyExplicit",
+        "score": 2.37
+    },
+    {
+        "model": "Flirtation",
+        "score": 35.55
+    },
+    {
+        "model": "Inflammatory",
+        "score": 14.63
+    },
+    {
+        "model": "Obscene",
+        "score": 1.87
+    },
+    {
+        "model": "Spam",
+        "score": 4.57
+    }
+]
+```
+
+### Demo
+You can demo any inputs and see the list of models with thier corrosponding metrics [here](https://apollo.volvox.tech).

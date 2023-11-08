@@ -135,8 +135,9 @@ const config: Config = {
       by <a href="https://github.com/VolvoxLLC">Volvox</a></span><br /><br />Copyright © ${new Date().getFullYear()} Volvox LLC`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oneLight,
+      darkTheme: prismThemes.oneDark,
+      additionalLanguages: ['json']
     },
   } satisfies Preset.ThemeConfig,
 
