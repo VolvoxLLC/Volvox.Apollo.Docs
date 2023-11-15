@@ -14,28 +14,27 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        User-friendly API allows for an easy implementation of Volvox software.
+        Just call on the API and Apollo will evaluate any message with precision. 
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Foster a Safe Community',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Protect your community by ensuring only safe, positive, and respectful messages emerge. 
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Powerful API',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Apollo is a powerful analysis gene designed to dissect any message. 
+        Input your message and the model will evaluate it and assign a score based on the API’s understanding of context and intent.
       </>
     ),
   },

@@ -1,0 +1,34 @@
+---
+sidebar_position: 2
+title: API Endpoints
+description: Volvox.Apollo API Endpoints For You
+slug: /endpoints
+---
+
+# Endpoints
+We expose **public** endpoints that allow you to easily integrate into your application.
+
+## Analyze Endpoint
+To analyze a message all you have to do is send a `GET` request to the following endpoint:
+```
+https://apollo.volvox.tech/api/analyze
+```
+with the following body:
+```json
+{
+  "content": "Hello World!",
+  "sender": "Volvox.Apollo",
+  "source": "Docs"
+}
+```
+and include the following header:
+```
+X-Volvox-Api-Key: <YOUR_API_KEY>
+```
+
+### Optional Parameters
+If you wish to only have select models be returned you can add
+```json
+modelNames: ["<MODEL_NAME>", "<MODEL_NAME>"]
+```
+then only those models will be returned.
