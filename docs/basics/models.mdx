@@ -30,36 +30,12 @@ Input = `This is a test input.`
 ```json
 [
     {
-        "model": "Toxicity",
-        "score": 1.23
-    },
-    {
-        "model": "SevereToxicity",
-        "score": 0.11
-    },
-    {
-        "model": "IdentityAttack",
-        "score": 0.26
-    },
-    {
-        "model": "Insult",
-        "score": 0.76
-    },
-    {
-        "model": "Profanity",
-        "score": 1.41
-    },
-    {
-        "model": "Threat",
-        "score": 0.74
-    },
-    {
-        "model": "SexuallyExplicit",
-        "score": 1.05
-    },
-    {
         "model": "Flirtation",
         "score": 17.25
+    },
+    {
+        "model": "Spam",
+        "score": 10.01
     },
     {
         "model": "Inflammatory",
@@ -70,8 +46,32 @@ Input = `This is a test input.`
         "score": 3.43
     },
     {
-        "model": "Spam",
-        "score": 10.01
+        "model": "Profanity",
+        "score": 1.41
+    },
+    {
+        "model": "Toxicity",
+        "score": 1.23
+    },
+    {
+        "model": "SexuallyExplicit",
+        "score": 1.05
+    },
+    {
+        "model": "Insult",
+        "score": 0.76
+    },
+    {
+        "model": "Threat",
+        "score": 0.74
+    },
+    {
+        "model": "IdentityAttack",
+        "score": 0.26
+    },
+    {
+        "model": "SevereToxicity",
+        "score": 0.11
     }
 ]
 ```
@@ -84,44 +84,44 @@ Input = `I want to light your house on fire.`
         "score": 71.76
     },
     {
-        "model": "SevereToxicity",
-        "score": 35.37
-    },
-    {
-        "model": "IdentityAttack",
-        "score": 12.44
-    },
-    {
-        "model": "Insult",
-        "score": 24.93
-    },
-    {
-        "model": "Profanity",
-        "score": 26.58
-    },
-    {
         "model": "Threat",
         "score": 70.48
-    },
-    {
-        "model": "SexuallyExplicit",
-        "score": 2.37
     },
     {
         "model": "Flirtation",
         "score": 35.55
     },
     {
+        "model": "SevereToxicity",
+        "score": 35.37
+    },
+    {
+        "model": "Profanity",
+        "score": 26.58
+    },
+    {
+        "model": "Insult",
+        "score": 24.93
+    },
+    {
         "model": "Inflammatory",
         "score": 14.63
     },
     {
-        "model": "Obscene",
-        "score": 1.87
+        "model": "IdentityAttack",
+        "score": 12.44
     },
     {
         "model": "Spam",
         "score": 4.57
+    },
+    {
+        "model": "SexuallyExplicit",
+        "score": 2.37
+    },
+    {
+        "model": "Obscene",
+        "score": 1.87
     }
 ]
 ```
@@ -130,8 +130,40 @@ Input = `I think you're adorable. Do you want to go on a date after work? Maybe 
 ```json
 [
     {
+        "model": "Flirtation",
+        "score": 96.79
+    },
+    {
+        "model": "SexuallyExplicit",
+        "score": 57.42
+    },
+    {
         "model": "Toxicity",
         "score": 48.5
+    },
+    {
+        "model": "Obscene",
+        "score": 39.24
+    },
+    {
+        "model": "Profanity",
+        "score": 36.3
+    },
+    {
+        "model": "Inflammatory",
+        "score": 27.08
+    },
+    {
+        "model": "Spam",
+        "score": 10.75
+    },
+    {
+        "model": "Insult",
+        "score": 8.69
+    },
+    {
+        "model": "Threat",
+        "score": 2.46
     },
     {
         "model": "SevereToxicity",
@@ -140,38 +172,6 @@ Input = `I think you're adorable. Do you want to go on a date after work? Maybe 
     {
         "model": "IdentityAttack",
         "score": 2.09
-    },
-    {
-        "model": "Insult",
-        "score": 8.69
-    },
-    {
-        "model": "Profanity",
-        "score": 36.3
-    },
-    {
-        "model": "Threat",
-        "score": 2.46
-    },
-    {
-        "model": "SexuallyExplicit",
-        "score": 57.42
-    },
-    {
-        "model": "Flirtation",
-        "score": 96.79
-    },
-    {
-        "model": "Inflammatory",
-        "score": 27.08
-    },
-    {
-        "model": "Obscene",
-        "score": 39.24
-    },
-    {
-        "model": "Spam",
-        "score": 10.75
     }
 ]
 ```
