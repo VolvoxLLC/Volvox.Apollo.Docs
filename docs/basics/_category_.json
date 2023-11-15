@@ -4,5 +4,6 @@
   "link": {
     "type": "generated-index",
     "description": "Gain a foundational understanding of Volvox.Apollo's core principles and learn to effectively utilize them in your integrations."
-  }
+  },
+  "collapsed": false
 }
