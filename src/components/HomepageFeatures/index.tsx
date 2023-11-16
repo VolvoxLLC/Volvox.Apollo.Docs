@@ -25,6 +25,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Protect your community by ensuring only safe, positive, and respectful messages emerge. 
+        Doing so creates a space where everyone feels welcome and valued and where constructive and supportive interactions are the standard. 
       </>
     ),
   },
