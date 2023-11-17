@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
-title: Analyze API Endpoint
+title: Analyze
 description: Learn how to use the Analyze endpoint to get metrics on messages
 slug: /endpoints/analyze
 ---
 
 # Analyze Endpoint
-To analyze a message all you have to do is send a `GET` request to the following endpoint:
+To analyze a message all you have to do is send a `POST` request to the following endpoint:
 ```
 https://apollo.volvox.tech/api/analyze
 ```
@@ -30,11 +30,61 @@ modelNames: ["<MODEL_NAME>", "<MODEL_NAME>"]
 ```
 then only those models will be returned.
 
-## Example
+### Example Request
 
 ```json
 curl https://apollo.volvox.tech/api/analyze -X POST 
 --data '{"content": "I want to light your house on fire!", "sender": "Docs User", "source": "Volvox.Apollo Docs", "modelNames": ["Toxicity", "SevereToxicity", "Flirtation"]}' 
 -H 'Content-Type: application/json' 
 -H 'X-Volvox-Api-Key:<YOUR_API_KEY>'
+```
+
+### Example Response
+```json
+[
+    {
+        "model": "Toxicity",
+        "score": 84.03
+    },
+    {
+        "model": "Threat",
+        "score": 79.41
+    },
+    {
+        "model": "Flirtation",
+        "score": 52.94
+    },
+    {
+        "model": "SevereToxicity",
+        "score": 44.79
+    },
+    {
+        "model": "Profanity",
+        "score": 33.95
+    },
+    {
+        "model": "Inflammatory",
+        "score": 31.52
+    },
+    {
+        "model": "Insult",
+        "score": 30.33
+    },
+    {
+        "model": "Obscene",
+        "score": 16.84
+    },
+    {
+        "model": "IdentityAttack",
+        "score": 6.52
+    },
+    {
+        "model": "Spam",
+        "score": 4.38
+    },
+    {
+        "model": "SexuallyExplicit",
+        "score": 4.17
+    }
+]
 ```

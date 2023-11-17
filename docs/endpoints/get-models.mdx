@@ -1,0 +1,91 @@
+---
+sidebar_position: 2
+title: Get Models
+description: Get all models that can be used by Volvox.Apollo
+slug: /endpoints/get-models
+---
+
+# Get Models Endpoint
+Using this endpoint will return all of the models that are available for you to analyze against. They include the `displayName`, `name`, and `description`.
+
+To get all of the models, all you have to do is send a `GET` request to the following endpoint:
+```
+https://apollo.volvox.tech/api/analyze/models
+```
+
+### Example Request
+```json
+curl 'https://apollo.volvox.tech/api/Analyzer/Models'
+```
+
+### Example Response
+```json
+[
+    {
+        "id": 1,
+        "displayName": "Toxicity",
+        "name": "Toxicity",
+        "description": "Attitudes or patterns of conduct that are harmful, negative, or detrimental to individuals, relationships, or social dynamics."
+    },
+    {
+        "id": 2,
+        "displayName": "Severe Toxicity",
+        "name": "SevereToxicity",
+        "description": "A highly detrimental and harmful category of attitudes or conduct that can have profoundly negative impacts on individuals and their surroundings, including abusive behaviors."
+    },
+    {
+        "id": 3,
+        "displayName": "Identity Attack",
+        "name": "IdentityAttack",
+        "description": "The intent to harm someone's reputation by making false statements or spreading false information about them, whether in spoken form (slander) or written form (libel)."
+    },
+    {
+        "id": 4,
+        "displayName": "Insult",
+        "name": "Insult",
+        "description": "Words that are deliberately offensive, disrespectful, or hurtful towards someone else. Such behavior may involve personal attacks, derogatory comments, or mocking gestures intended to demean or belittle the individual."
+    },
+    {
+        "id": 5,
+        "displayName": "Profanity",
+        "name": "Profanity",
+        "description": "Words or expressions that are vulgar, irreverent, or disrespectful. These words are typically in violation of societal norms, cultural values, or religious beliefs. This behavior often involves the use of obscene and offensive language or gestures that may shock or offend others."
+    },
+    {
+        "id": 6,
+        "displayName": "Threat",
+        "name": "Threat",
+        "description": "Expressions that convey a clear intent to harm or intimidate someone physically, emotionally, or psychologically. This behavior can take many forms, including verbal threats, gestures, or written messages."
+    },
+    {
+        "id": 7,
+        "displayName": "Sexually Explicit",
+        "name": "SexuallyExplicit",
+        "description": "Content or behaviors that are sexually suggestive, graphic, or explicit in nature."
+    },
+    {
+        "id": 8,
+        "displayName": "Flirtation",
+        "name": "Flirtation",
+        "description": "Words or gestures that are often romantic or sexually suggestive in nature. This could include pickup lines, complimenting appearances, and sexual innuendos."
+    },
+    {
+        "id": 9,
+        "displayName": "Inflammatory",
+        "name": "Inflammatory",
+        "description": "Statements or content that are intentionally provocative, offensive, or designed to incite anger, resentment, or conflict in others."
+    },
+    {
+        "id": 10,
+        "displayName": "Obscene",
+        "name": "Obscene",
+        "description": "Conduct or content that is considered extremely offensive, indecent, or morally repugnant, typically in violation of societal norms."
+    },
+    {
+        "id": 11,
+        "displayName": "Spam",
+        "name": "Spam",
+        "description": "Unsolicited, irrelevant or repetitive messages, content, or communications sent in bulk. These messages are typically sent via email, instant messaging, or other digital communication channels."
+    }
+]
+```
