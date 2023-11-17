@@ -1,14 +1,11 @@
 ---
-sidebar_position: 3
-title: API Endpoints
-description: Volvox.Apollo API Endpoints For You
-slug: /endpoints
+sidebar_position: 1
+title: Analyze API Endpoint
+description: Learn how to use the Analyze endpoint to get metrics on messages
+slug: /endpoints/analyze
 ---
 
-# Endpointss
-We expose **public** endpoints that allow you to easily integrate into your application.
-
-## Analyze Endpoint
+# Analyze Endpoint
 To analyze a message all you have to do is send a `GET` request to the following endpoint:
 ```
 https://apollo.volvox.tech/api/analyze
@@ -36,7 +33,7 @@ then only those models will be returned.
 ## Example
 
 ```json
-curl https://apollo.volvox.tech/api/analyzer -X POST 
+curl https://apollo.volvox.tech/api/analyze -X POST 
 --data '{"content": "I want to light your house on fire!", "sender": "Docs User", "source": "Volvox.Apollo Docs", "modelNames": ["Toxicity", "SevereToxicity", "Flirtation"]}' 
 -H 'Content-Type: application/json' 
 -H 'X-Volvox-Api-Key:<YOUR_API_KEY>'
