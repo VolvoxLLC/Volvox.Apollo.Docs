@@ -1,6 +1,6 @@
 {
   "label": "Metrics & Models",
-  "position": 2,
+  "position": 1,
   "link": {
     "type": "generated-index",
     "description": "Gain a foundational understanding of Volvox.Apollo's core metrics and models principles and learn to effectively utilize them in your integrations."
