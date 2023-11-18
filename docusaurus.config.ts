@@ -99,7 +99,9 @@ const config: Config = {
         {
           to: '/apollo-docs/',
           position: 'left',
-          label: 'Home'
+          label: 'Home',
+          activeClassName: 'navbar__link--active',
+          activeBaseRegex: '^(\/apollo-docs\/)$',
         },
         {
           type: 'doc',
