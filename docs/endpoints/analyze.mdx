@@ -6,6 +6,7 @@ slug: /endpoints/analyze
 ---
 
 # Analyze Endpoint
+
 To analyze a message all you have to do is send a `POST` request to the following endpoint:
 ```
 https://apollo.volvox.tech/api/analyze
@@ -24,6 +25,7 @@ X-Volvox-Api-Key: <YOUR_API_KEY>
 ```
 
 ### Optional Parameters
+
 If you wish to only have select models be returned you can add
 ```json
 modelNames: ["<MODEL_NAME>", "<MODEL_NAME>"]
@@ -40,6 +42,7 @@ curl https://apollo.volvox.tech/api/analyze -X POST
 ```
 
 ### Example Response
+
 ```json
 [
     {
